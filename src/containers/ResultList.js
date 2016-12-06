@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { searchWiki } from '../libs/ajax'
+import ResultItem from '../components/ResultItem'
 
 export default class ResultList extends Component {
   constructor (props) {
@@ -14,14 +15,9 @@ export default class ResultList extends Component {
     searchWiki(this.props.search)
 
     .then(response => {
-      console.info('SUCCESS', response)
-      const pages = response.data.query.pages
-      let articles = []
-      for (let i = 0; i < pages.length; i++) {
-        articles.push(pages[i])
-      }
+      // console.info('SUCCESS', response)
       this.setState({
-        results: articles
+        results: response.data.query.pages
       })
     })
 
@@ -31,21 +27,8 @@ export default class ResultList extends Component {
   }
 
   render () {
-    const { results } = this.state
     return (
-      <div className='resultList'>
-        You searched for {this.props.search}. The results are:
-        {
-          results.map(article => {
-            return (
-              <div id={article.pageid} className='resultItem'>
-                <h3>{article.title}</h3>
-                <p>{article.extract}</p>
-              </div>
-            )
-          })
-        }
-      </div> 
+      <ResultItem search={this.props.search} results={this.state.results} />
     )
   }
 }
