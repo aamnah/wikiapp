@@ -15,7 +15,6 @@ export default class ResultList extends Component {
     searchWiki(this.props.search)
 
     .then(response => {
-      // console.info('SUCCESS', response)
       this.setState({
         results: response.data.query.pages
       })
