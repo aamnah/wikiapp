@@ -1,11 +1,13 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <h1> This is an article!</h1>
-      </div>
-    )
-  }
+export default function Article (props) {
+
+  let { title, extract, thumbnail, image } = props.data
+  return (
+    <div>
+      <h1>{title}</h1>
+      <a href={image}><img src={thumbnail} /></a>
+      <p>{extract}</p>
+    </div>
+  )
 }
