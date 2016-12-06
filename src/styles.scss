@@ -1,3 +1,48 @@
+@import '_normalize.scss';
+
+$border-radius: 3px;
+$color-primary: #2980b9;
+$color-secondary: #8e44ad;
+$color-text: #424242;
+$btn-bg: #2980b9;
+$btn-text: $btn-bg;
+$btn-text-hover: #fff;
+
 body {
-  background: #eee;
+  background: #e1e1e1;
+  color: $color-text;
+  font-family: 'Lato', 'Helvetica Neue', 'Arial' sans-serif;
+  line-height: 1.6;
+}
+.container {
+  margin: 0 auto;
+  padding: 5% 10%;
+}
+button, .btn {
+  padding: 1em;
+  margin: 1em .5em;
+  border: 2px solid $btn-bg;
+  border-radius: $border-radius;
+  background: transparent;
+  color: $btn-bg;
+  font-size: .8em;
+  &:hover {
+    background: $btn-bg;
+    color: #fff;
+    cursor: pointer
+  }
+}
+a.btn {
+  text-decoration: none;
+  color: $btn-bg;  
+}
+.fa {
+  padding-right: 8px;
+}
+input[type='text'] {
+  border: 2px solid $btn-bg;
+  padding: 1em .5em;
+  &:focus {
+    outline: none
+  }
 }
