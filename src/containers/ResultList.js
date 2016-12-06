@@ -32,15 +32,17 @@ export default class ResultList extends Component {
 
   render () {
     const { results } = this.state
-
     return (
       <div className='resultList'>
-        Here's a search listing for you. You searched for {this.props.search}.
-        Your results are:
+        You searched for {this.props.search}. The results are:
         {
           results.map(article => {
-          let id = article.pageid
-          return <li id={id}>{article.title}</li>
+            return (
+              <div id={article.pageid} className='resultItem'>
+                <h3>{article.title}</h3>
+                <p>{article.extract}</p>
+              </div>
+            )
           })
         }
       </div> 
