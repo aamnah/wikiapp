@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import ResultList from '../containers/ResultList'
 import RandomArticle from './RandomArticle'
-import Search from './Search'
+import Search from '../containers/Search'
 
 export default class App extends Component {
   render () {
