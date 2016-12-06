@@ -1,0 +1,13 @@
+# app
+dist/
+.sass-cache
+*.css.map
+
+
+# Node stuff
+node_modules
+npm-debug.log
+bower_components
+
+# Unix swap files
+*.swp
