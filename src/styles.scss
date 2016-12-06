@@ -57,7 +57,8 @@ form {
 
 .resultItem {
   padding-bottom: 1em;
-  border-right: 3px solid rgba(0,0,0,0);
+  padding-left: 1em;
+  border-left: 3px solid rgba(0,0,0,0);
   border-bottom: 1px dotted rgba(0,0,0,0.2);
   &:hover {
     border-left: 3px solid $color-primary;
