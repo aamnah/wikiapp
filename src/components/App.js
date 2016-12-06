@@ -1,12 +1,17 @@
 import React, {Component} from 'react'
 import ResultList from '../containers/ResultList'
+import RandomArticle from './RandomArticle'
+import Search from './Search'
 
 export default class App extends Component {
   render () {
     return (
-      <div>
+      <div className='container'>
         <h1>Wikipedia Viewer</h1>
-        <ResultList search='lahore' />
+        <div className='searchBar'>
+          <RandomArticle />
+          <Search />
+        </div>
       </div>
     )
   }

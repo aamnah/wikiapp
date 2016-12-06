@@ -11,12 +11,10 @@ export default class ResultList extends Component {
   }
 
   componentDidMount () {
-    let search = this.props.search
-
-    searchWiki(search)
+    searchWiki(this.props.search)
 
     .then(response => {
-      // console.info('SUCCESS', response)
+      console.info('SUCCESS', response)
       const pages = response.data.query.pages
       let articles = []
       for (let i = 0; i < pages.length; i++) {
@@ -36,7 +34,7 @@ export default class ResultList extends Component {
     const { results } = this.state
 
     return (
-      <div>
+      <div className='resultList'>
         Here's a search listing for you. You searched for {this.props.search}.
         Your results are:
         {
