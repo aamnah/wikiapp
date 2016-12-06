@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { searchWiki } from '../libs/ajax'
-import ResultItem from '../components/ResultItem'
+import ResultItem from './ResultItem'
 
 export default class ResultList extends Component {
   constructor (props) {
