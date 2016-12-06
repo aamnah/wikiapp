@@ -11,13 +11,13 @@ export default class InputField extends Component {
     }
   }
 
-  handleChange (event) {
+  handleChange = (event) => {
     this.setState({
       value: event.target.value
     })
   }
 
-  handleSearch (event) {
+  handleSearch = (event) => {
     this.setState({
       submitted: true
     })
@@ -32,8 +32,8 @@ export default class InputField extends Component {
       )
     } else {
       return (
-        <form onSubmit={this.handleSearch.bind(this)}>   
-          <input type='text' value={value} onChange={this.handleChange.bind(this)} placeholder='search..' />
+        <form onSubmit={this.handleSearch}>   
+          <input type='text' value={value} onChange={this.handleChange} placeholder='search..' />
           <input type='submit' value='Search' className='btn' />
         </form>
       )

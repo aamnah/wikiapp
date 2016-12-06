@@ -7,6 +7,7 @@
 		"transform-es2015-parameters",
 		"transform-es2015-destructuring",
 		"syntax-object-rest-spread",
-  	"transform-object-rest-spread"
+  	"transform-object-rest-spread",
+		"transform-class-properties"
   ]
 }
