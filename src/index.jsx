@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-
+import { Router, Route, browserHistory } from 'react-router'
 import App from './components/App'
 
-// Styles
 require('./styles.scss')
 
-
-
-
 ReactDOM.render(
-  <App />,
+  <Router history={browserHistory}>
+    <Route path='/' component={App} />
+  </Router>,
   document.querySelector('#root')
 )
