@@ -4,7 +4,7 @@ import Article from '../components/Article'
 
 export default class ArticleContainer extends Component {
 
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -35,9 +35,9 @@ export default class ArticleContainer extends Component {
     })
   }
 
-  render () {    
+  render () {
     return (
-      < Article data={this.state}/>
+      < Article data={this.state} />
     )
   }
 }
