@@ -5,7 +5,7 @@ function requestData () {
   }
 }
 
-function receveData (json) {
+function receiveData (json) {
   return {
     type: 'RECV_DATA'
   }
